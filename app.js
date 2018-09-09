@@ -25,7 +25,6 @@ function createReplyMessage(input) {
     text = hands[Math.floor(hands.length * Math.random())];
   }
  
-
   return {
     type: "text",
     // 「text: text」のようにキー名と変数名が同じ場合、以下のように省略可能
