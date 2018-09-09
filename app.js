@@ -8,6 +8,11 @@ const lineConfig = {
 };
 const lineClient = new line.Client(lineConfig);
 
+const prev = {
+  user: null,
+  bot: null
+};
+
 function createReplyMessage(input) {
   // 3. 条件分岐（じゃんけん）
   const hands = ["グー", "チョキ", "パー"];
@@ -17,7 +22,10 @@ function createReplyMessage(input) {
   // 配列.indexOf(引数) =>
   //   引数が配列の何番目（0始まり）にあるかを返す
   //   引数が配列にない場合、-1を返す
-  if (hands.indexOf(input) === -1) {
+  if (input === '判定'){
+    if(user === bot){text = "あいこ";}
+  }
+  else if (hands.indexOf(input) === -1) {
     // ユーザーが入力した内容が「グー、チョキ、パー」以外だった場合
     text = "グー・チョキ・パーのどれかを入力してね";
   } else {
@@ -25,12 +33,9 @@ function createReplyMessage(input) {
     text = hands[Math.floor(hands.length * Math.random())];
   }
 
-  text:`${input}、と言いましたね？`
-    // 判定
+  prev.user = input;
+  prev.bot = text;
   
- 
-
-
   return {
     type: "text",
     // 「text: text」のようにキー名と変数名が同じ場合、以下のように省略可能
