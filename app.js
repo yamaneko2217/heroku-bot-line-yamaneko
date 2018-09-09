@@ -10,7 +10,7 @@ const lineClient = new line.Client(lineConfig);
 
 function createReplyMessage(input) {
   // 3. 条件分岐（じゃんけん）
-  const hands = ["１", "２", "３"];
+  const hands = ["a", "b", "c"];
   // 返信メッセージを入れる変数
   let text;
 
@@ -19,7 +19,7 @@ function createReplyMessage(input) {
   //   引数が配列にない場合、-1を返す
   if (hands.indexOf(input) === -1) {
     // ユーザーが入力した内容が「グー、チョキ、パー」以外だった場合
-    text = "1・2・3のどれかを入力してね";
+    text = "a・b・cのどれかを入力してね";
   } else {
     // 手からランダムに一つ選択
     text = hands[Math.floor(hands.length * Math.random())];
