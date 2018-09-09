@@ -25,9 +25,10 @@ function createReplyMessage(input) {
     text = hands[Math.floor(hands.length * Math.random())];
   }
 
-  if(hands[0] === 0){text = "あいこ";}
-  if(hands[1] === 1){text = "あいこ";}
-  if(hands[2] === 2){text = "あいこ";}
+  text:`${input}、と言いましたね？`
+    // 判定
+  
+ 
 
 
   return {
