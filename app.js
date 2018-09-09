@@ -9,17 +9,15 @@ const lineConfig = {
 const lineClient = new line.Client(lineConfig);
 
 function createReplyMessage(input) {
-  // 3. 画像を返す
-
-  const appUrl = process.env.HEROKU_APP_URL;
+  // 2. オウム返しする
   return {
-    type: "image",
-    previewImageUrl: `${appUrl}images/question.png`,
-    originalContentUrl: `${appUrl}images/answer.png`
+    type: "text",
+    // `（バッククォート）で囲った中で${変数名}や${式}を書くと結果が展開される
+    // テンプレートリテラル（Template literal）という文法です
+    text: `${input}、と言いましたね？`
+    // 以下と同じです
+    // text: input + '、と言いましたね？'
   };
-
-  // メッセージオブジェクトに関する公式ドキュメント
-  // https://developers.line.me/ja/reference/messaging-api/#message-objects
 }
 
 const server = express();
@@ -39,4 +37,3 @@ server.post("/webhook", line.middleware(lineConfig), (req, res) => {
 });
 
 server.listen(process.env.PORT || 8080);
-
