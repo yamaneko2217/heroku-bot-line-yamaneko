@@ -24,9 +24,11 @@ function createReplyMessage(input) {
     // 手からランダムに一つ選択
     text = hands[Math.floor(hands.length * Math.random())];
   }
-  if(hands.indexOf(input) === 0){text = "あいこ";}
-  if(hands.indexOf(input) === 1){text = "あいこ";}
-  if(hands.indexOf(input) === 2){text = "あいこ";}
+
+  if(hands[0] === 0){text = "あいこ";}
+  if(hands[1] === 1){text = "あいこ";}
+  if(hands[2] === 2){text = "あいこ";}
+
 
   return {
     type: "text",
