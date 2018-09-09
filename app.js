@@ -10,7 +10,7 @@ const lineClient = new line.Client(lineConfig);
 
 function createReplyMessage(input) {
   // 3. 条件分岐（じゃんけん）
-  const hands = ["大吉", "吉", "凶"];
+  const hands = ["１", "２", "３"];
   // 返信メッセージを入れる変数
   let text;
 
