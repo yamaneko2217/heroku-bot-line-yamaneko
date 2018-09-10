@@ -26,17 +26,17 @@ function createReplyMessage(input) {
     if(user === [0]){
      if(bot === [0]){text = "あいこ";}
      else if(bot === [1]){text = "勝利";}
-     else(bot === [2]);{text ="負け";}
+     else if(bot === [2]);{text ="負け";}
     }
     else if(user === [1]){
      if(bot === [0]){text = "負";}
      else if(bot === [1]){text ="あいこ";}
-     else(bot === [2]);{text = "勝利";}
+     else if(bot === [2]);{text = "勝利";}
     } 
-    else(user === [2]);{
+    else if(user === [2]);{
      if(bot === [0]){text = "勝利";}
      else if(bot === [1]){text = "負け";}
-     else(bot === [2]);{text = "あいこ";}
+     else if(bot === [2]);{text = "あいこ";}
     }
   
   }else if (hands.indexOf(input) === -1) {
