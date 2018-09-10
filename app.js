@@ -23,7 +23,7 @@ function createReplyMessage(input) {
   //   引数が配列の何番目（0始まり）にあるかを返す
   //   引数が配列にない場合、-1を返す
   if (input === '判定'){
-    text = "NICE GAME! \n もう一度勝負する場合は　3　を送信し、手を出してね";
+    text = "NICE GAME! \n もう一度勝負する場合は「3」を送信し、手を出してね";
   }else if (hands.indexOf(input) === -1) {
     // ユーザーが入力した内容が「グー、チョキ、パー」以外だった場合
     text = "グー・チョキ・パーのどれかを入力してね";
