@@ -23,15 +23,23 @@ function createReplyMessage(input) {
   //   引数が配列の何番目（0始まり）にあるかを返す
   //   引数が配列にない場合、-1を返す
   if (input === '判定'){
-    if(user === bot){text = "あいこ";}
-    if(user === 0 && bot === 1){text = "勝利";}
-    if(user === 1 && bot === 2){text = "勝利";}
-    if(user === 2 && bot === 0){text = "勝利";}
-    if(user === 0 && bot === 2){text = "負け";}
-    if(user === 1 && bot === 0){text = "負け";}
-    if(user === 2 && bot === 1){text = "負け";}
-  }
-  else if (hands.indexOf(input) === -1) {
+    if(user === 0){
+     if(bot === 0){text = "あいこ";}
+     else if(bot ===1){text = "勝利";}
+     else(bot === 2){text ="負け";}
+    }  
+    else if(user === 1){
+     if(bot === 0){text = "負";}
+     else if(bot === 1){text ="あいこ";}
+     else(bot === 2){text = "勝利";}
+    } 
+    else(user === 2){
+     if(bot === 0){text = "勝利";}
+     else if(bot === 1){text = "負け";}
+     else(bot === 2){text = "あいこ";}
+    }
+  
+  }else if (hands.indexOf(input) === -1) {
     // ユーザーが入力した内容が「グー、チョキ、パー」以外だった場合
     text = "グー・チョキ・パーのどれかを入力してね";
   } else {
