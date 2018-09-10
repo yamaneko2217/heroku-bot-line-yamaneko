@@ -27,7 +27,7 @@ function createReplyMessage(input) {
   }else if (hands.indexOf(input) === -1) {
     // ユーザーが入力した内容が「グー、チョキ、パー」以外だった場合
     text = "グー・チョキ・パーのどれかを入力してね";
-  }else if (input === 3){
+  }else if (input === '3'){
     break;  
   } else {
     // 手からランダムに一つ選択
