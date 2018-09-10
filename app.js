@@ -23,20 +23,20 @@ function createReplyMessage(input) {
   //   引数が配列の何番目（0始まり）にあるかを返す
   //   引数が配列にない場合、-1を返す
   if (input === '判定'){
-    if(user === 0){
-     if(bot === 0){text = "あいこ";}
-     else if(bot ===1){text = "勝利";}
-     else(bot === 2);{text ="負け";}
+    if(user === [0]){
+     if(bot === [0]){text = "あいこ";}
+     else if(bot === [1]){text = "勝利";}
+     else(bot === [2]);{text ="負け";}
     }
-    else if(user === 1){
-     if(bot === 0){text = "負";}
-     else if(bot === 1){text ="あいこ";}
-     else(bot === 2);{text = "勝利";}
+    else if(user === [1]){
+     if(bot === [0]){text = "負";}
+     else if(bot === [1]){text ="あいこ";}
+     else(bot === [2]);{text = "勝利";}
     } 
-    else(user === 2);{
-     if(bot === 0){text = "勝利";}
-     else if(bot === 1){text = "負け";}
-     else(bot === 2);{text = "あいこ";}
+    else(user === [2]);{
+     if(bot === [0]){text = "勝利";}
+     else if(bot === [1]){text = "負け";}
+     else(bot === [2]);{text = "あいこ";}
     }
   
   }else if (hands.indexOf(input) === -1) {
