@@ -27,17 +27,17 @@ function createReplyMessage(input) {
       if(bot === 'グー'){text = "あいこ";}
       else if(bot === 'チョキ'){text = "勝利";}
       else if(bot === 'パー'){text ="負け";}
-     }
+    }
      else if(user === 'チョキ'){
       if(bot === 'グー'){text = "負";}
       else if(bot === 'チョキ'){text ="あいこ";}
       else if(bot === 'パー'){text = "勝利";}
-     } 
+    } 
      else if(user === 'パー'){
       if(bot === 'グー'){text = "勝利";}
       else if(bot === 'チョキ'){text = "負け";}
       else if(bot === 'パー');{text = "あいこ";}
-     }
+    }
   } else if (hands.indexOf(input) === -1) {
     // ユーザーが入力した内容が「グー、チョキ、パー」以外だった場合
     text = "グー・チョキ・パーのどれかを入力してね";
